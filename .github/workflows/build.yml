@@ -10,7 +10,7 @@ jobs:
           java-version: '18'
           distribution: 'temurin'
       - name: Run the Maven verify phase
-        run: mvn --batch-mode --update-snapshots clean verify
+        run: mvn -X --batch-mode --update-snapshots clean verify
   build-with-jdk-19:
     runs-on: ubuntu-latest
     steps:
@@ -20,4 +20,4 @@ jobs:
           java-version: '19'
           distribution: 'temurin'
       - name: Run the Maven verify phase
-        run: mvn --batch-mode --update-snapshots clean verify
+        run: mvn -X --batch-mode --update-snapshots clean verify
